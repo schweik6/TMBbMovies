@@ -2,7 +2,7 @@
 //  TMBbMoviesApp.swift
 //  TMBbMovies
 //
-//  Created by xmly on 2022/11/11.
+//  Created by schweik on 2022/11/11.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct TMBbMoviesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MovieListView()
         }
     }
 }

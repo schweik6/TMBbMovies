@@ -2,7 +2,7 @@
 //  TMBbMoviesUITests.swift
 //  TMBbMoviesUITests
 //
-//  Created by xmly on 2022/11/11.
+//  Created by schweik on 2022/11/11.
 //
 
 import XCTest
