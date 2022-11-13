@@ -19,12 +19,14 @@ struct MovieListView: View {
             let movies = movieFetcher.movies!
             List(movies.indices, id: \.self) { i in
                 // '>' can useNavigationLink to imply.
-                NavigationLink(destination: Text("test")) {
+                NavigationLink(destination: Text("Developing...")) {
                     // The component view of the movie row.
                     MovieRowView(movieRow: movies[i])
                 }
                 // Remove the top (first) separator line.
                 .listRowSeparator(i==0 ? .hidden : .automatic, edges: .top)
+                // Remove the default row top/bottom paddings.
+                .padding(.vertical, -9.2)
             }.navigationTitle(Text("Popular Movies"))
             // To hide the standard system background of the List.
             .scrollContentBackground(.hidden)

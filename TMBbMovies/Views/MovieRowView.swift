@@ -19,15 +19,20 @@ struct MovieRowView: View {
         HStack {
             // Get thumnail by join.
             let thumnail = MovieRowView.imagePathPrefix + movieRow.posterPath
-            // To render the thumnail of the movie at head. 55 size in the UI image file.
-            WebImageView(withURL: thumnail, cropRectCentered: true).scaledToFit().frame(width: 55, height: 55)
+            // To render the thumnail of the movie at head. 55 size crop for the UI image design.
+            WebImageView(withURL: thumnail, cropRectCentered: true).frame(width: 55, height: 55)
+                // Add trailing padding to the image.
+                .padding(.trailing).shadow(radius: 1)
             // The title and tagline of the movie algin lead.
             VStack(alignment: .leading) {
-                // To render the title of the movie.
-                Text(movieRow.title)
-                // To render the tagline of the movie.
-                Text(movieRow.tagline).font(.caption)
+                // To render the title of the movie, set the one line limit.
+                Text(movieRow.title).font(.system(size: 16)).fontWeight(Font.Weight.medium).lineLimit(1)
+                // Whether to render the tagline will influence the layout.
+                if !movieRow.tagline.isEmpty {
+                    // To render the tagline of the movie, set the one line limit.
+                    Text(movieRow.tagline).font(.system(size: 14)).foregroundColor(.secondary).lineLimit(1)
+                }
             }
-        }.frame(height: 38)
+        }
     }
 }
