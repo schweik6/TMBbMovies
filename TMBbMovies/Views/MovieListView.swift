@@ -14,13 +14,24 @@ struct MovieListView: View {
     @ObservedObject var movieFetcher = MovieFetcher()
     
     var body: some View {
-        NavigationView {
-            // loop the movies list, must be inited.
-            List(movieFetcher.movies!) { movie in
+        NavigationStack {
+            // Loop the movies list, must be inited.
+            let movies = movieFetcher.movies!
+            List(movies.indices, id: \.self) { i in
+                // '>' can useNavigationLink to imply.
                 NavigationLink(destination: Text("test")) {
-                    MovieRowView(movieRow: movie)
+                    // The component view of the movie row.
+                    MovieRowView(movieRow: movies[i])
                 }
+                // Remove the top (first) separator line.
+                .listRowSeparator(i==0 ? .hidden : .automatic, edges: .top)
             }.navigationTitle(Text("Popular Movies"))
+            // To hide the standard system background of the List.
+            .scrollContentBackground(.hidden)
+            // The same white background.
+            .background(.white)
+            // Choose the style for the leading alignment.
+            .listStyle(.plain)
         }
     }
 }
