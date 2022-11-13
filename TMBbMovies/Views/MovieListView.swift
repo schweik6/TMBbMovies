@@ -7,18 +7,21 @@
 
 import SwiftUI
 
-// The view of TMDb movies list, render the list datas.
+
+/// The view of TMDb movies list, render the list datas.
 struct MovieListView: View {
     // To load the data by MovieFetcher when the properties init/change.
     @ObservedObject var movieFetcher = MovieFetcher()
     
     var body: some View {
-        // loop the movies list, must be inited.
-        List(movieFetcher.movies!) { movie in
-            NavigationLink(destination: Text("test")) {
-                MovieRowView(movieRow: movie)
-            }
-        }.navigationTitle(Text("Popular Movies"))
+        NavigationView {
+            // loop the movies list, must be inited.
+            List(movieFetcher.movies!) { movie in
+                NavigationLink(destination: Text("test")) {
+                    MovieRowView(movieRow: movie)
+                }
+            }.navigationTitle(Text("Popular Movies"))
+        }
     }
 }
 

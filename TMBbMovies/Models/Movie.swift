@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-// The model is JSON Decodable and Identifiable.
+/// The model is JSON Decodable and Identifiable.
 struct Movie: Decodable & Identifiable {
     var id: Int
     
     // Movie row datas, parsed from the JSON coontents.
-    let poster_path, title, tagline: String
+    let posterPath, title, tagline: String
 }
