@@ -16,9 +16,6 @@
 		B6626265291E953300790D28 /* TMBbMoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6626264291E953300790D28 /* TMBbMoviesApp.swift */; };
 		B6626269291E953700790D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6626268291E953700790D28 /* Assets.xcassets */; };
 		B662626C291E953700790D28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B662626B291E953700790D28 /* Preview Assets.xcassets */; };
-		B6626276291E953700790D28 /* TMBbMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6626275291E953700790D28 /* TMBbMoviesTests.swift */; };
-		B6626280291E953700790D28 /* TMBbMoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662627F291E953700790D28 /* TMBbMoviesUITests.swift */; };
-		B6626282291E953700790D28 /* TMBbMoviesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6626281291E953700790D28 /* TMBbMoviesUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +47,7 @@
 		B6626268291E953700790D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B662626B291E953700790D28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B6626271291E953700790D28 /* TMBbMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMBbMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6626275291E953700790D28 /* TMBbMoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMBbMoviesTests.swift; sourceTree = "<group>"; };
 		B662627B291E953700790D28 /* TMBbMoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMBbMoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B662627F291E953700790D28 /* TMBbMoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMBbMoviesUITests.swift; sourceTree = "<group>"; };
-		B6626281291E953700790D28 /* TMBbMoviesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMBbMoviesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				B6626263291E953300790D28 /* TMBbMovies */,
-				B6626274291E953700790D28 /* TMBbMoviesTests */,
-				B662627E291E953700790D28 /* TMBbMoviesUITests */,
 				B6626262291E953300790D28 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,23 +131,6 @@
 				B662626B291E953700790D28 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		B6626274291E953700790D28 /* TMBbMoviesTests */ = {
-			isa = PBXGroup;
-			children = (
-				B6626275291E953700790D28 /* TMBbMoviesTests.swift */,
-			);
-			path = TMBbMoviesTests;
-			sourceTree = "<group>";
-		};
-		B662627E291E953700790D28 /* TMBbMoviesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B662627F291E953700790D28 /* TMBbMoviesUITests.swift */,
-				B6626281291E953700790D28 /* TMBbMoviesUITestsLaunchTests.swift */,
-			);
-			path = TMBbMoviesUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,7 +277,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6626276291E953700790D28 /* TMBbMoviesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,8 +284,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6626282291E953700790D28 /* TMBbMoviesUITestsLaunchTests.swift in Sources */,
-				B6626280291E953700790D28 /* TMBbMoviesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
