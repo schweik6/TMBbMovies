@@ -14,12 +14,14 @@ struct MovieListView: View {
     @ObservedObject var movieFetcher = MovieFetcher()
     
     var body: some View {
+        
+        // The navigation.
         NavigationStack {
             // Loop the movies list, must be inited.
             let movies = movieFetcher.movies!
             List(movies.indices, id: \.self) { i in
                 // '>' can useNavigationLink to imply.
-                NavigationLink(destination: Text("Developing...")) {
+                NavigationLink(destination: MovieDetailView(movieDetail: movies[i])) {
                     // The component view of the movie row.
                     MovieRowView(movieRow: movies[i])
                 }
@@ -27,7 +29,9 @@ struct MovieListView: View {
                 .listRowSeparator(i==0 ? .hidden : .automatic, edges: .top)
                 // Remove the default row top/bottom paddings.
                 .padding(.vertical, -9.2)
-            }.navigationTitle(Text("Popular Movies"))
+            }
+            // The navigation title.
+            .navigationTitle(Text("Popular Movies"))
             // To hide the standard system background of the List.
             .scrollContentBackground(.hidden)
             // The same white background.

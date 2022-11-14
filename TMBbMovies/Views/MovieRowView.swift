@@ -30,7 +30,7 @@ struct MovieRowView: View {
                 // Whether to render the tagline will influence the layout.
                 if !movieRow.tagline.isEmpty {
                     // To render the tagline of the movie, set the one line limit.
-                    Text(movieRow.tagline).font(.system(size: 14)).foregroundColor(.secondary).lineLimit(1)
+                    Text(movieRow.tagline).font(.system(size: 14)).foregroundColor(Color.init(white: 0.65)).lineLimit(1)
                 }
             }
         }
