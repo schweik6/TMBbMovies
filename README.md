@@ -1,4 +1,4 @@
-# Topcoder Skill Builder Competition | iOS Swift Development | Medium
+# Topcoder Skill Builder Competition | iOS Swift Development | Hard
 
 ## Project: TMDbMovies
 
@@ -8,10 +8,10 @@
 	- MovieDetailView (For the detail page)
 	- MovieRoleView (The component view of the detail page)
 	- WebImageView (The component view for the web image)
+	- LoadingActivityIndicator (The component view for the loading indicator)
 - Models (The package of Model)
 	- Movie (Core Movie info)
 	- Member (The role member of the movie)
 - TMBdMoviesApp (startup)
-- MovieFetcher (movie data fetcher, from local file)
-- TMDbMovies.json (movie data json file)
-- .git/ (git commit info from the easy level)
+- MovieFetcher (movie data fetcher, by requesting api)
+- .git/ (git commit info from the medium level)
